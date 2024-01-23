@@ -1,9 +1,3 @@
----
-layout: default
-title: Kruskal算法
-parent: LeetCode
----
-
 # Kruskal算法
 Kruskal算法是一种常用的最小生成树算法，用于在给定无向连通图中找到最小生成树。最小生成树是一个连通子图，它包含了原图的所有顶点，并且具有最小的总权重或代价。
 

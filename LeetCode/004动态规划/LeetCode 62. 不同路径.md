@@ -1,10 +1,3 @@
----
-layout: default
-title: 不同路径
-parent: 动态规划
-grand_parent: LeetCode
----
-
 # LeetCode 62. 不同路径
 ![](../../assets/images/code/dp01.png)
 

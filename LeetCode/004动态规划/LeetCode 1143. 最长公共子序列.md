@@ -1,10 +1,3 @@
----
-layout: default
-title: 最长公共子序列
-parent: 动态规划
-grand_parent: LeetCode
----
-
 # LeetCode 1143. 最长公共子序列
 ![](../../assets/images/code/maxsub01.png)
 

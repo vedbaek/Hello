@@ -1,10 +1,3 @@
----
-layout: default
-title: ImageMagick图片压缩
-parent: Tools
----
-
-
 # 1. 安装ImageMagick
 ```
 sudo apt-get update
