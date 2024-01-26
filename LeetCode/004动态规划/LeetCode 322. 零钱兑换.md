@@ -15,7 +15,7 @@ $$
 
 ### 1.2 取最小兑换个数
 $$
-dp(amount) = min(dp(amount - coin_{0})+1, ... dp(amount - coin_{n-1})+1, )
+dp(amount) = min(dp_0(amount - coin_{0})+1, ... dp_{n-1}(amount - coin_{n-1})+1)
 $$
 
 ### 1.3 初始条件
@@ -27,6 +27,8 @@ dp(<0) = -1
 $$
 
 ## 2. 递归解法
+确定动态转移方程之后，递归总是最复合直觉的方案
+
 ![](../../assets/images/code/coin_exchange02.jpg)
 ```cpp
 int dp(const vector<int>& coins, int amount) {
@@ -57,7 +59,8 @@ int dp(const vector<int>& coins, int amount) {
 }
 ```
 
-### 2.1 递归优化，前面的递归解法在递归到子节点之后可能当前节点的值已经被其它分支已经计算过了，可以根据这点缓存已经确认的值，避免子节点重复计算
+### 2.1 递归优化
+前面的递归解法在递归到子节点之后可能当前节点的值已经被其它分支已经计算过了，可以根据这点缓存已经确认的值，避免子节点重复计算
 ```cpp
 int dp(const vector<int>& coins, int amount, vector<int>& cache) {
 
@@ -93,7 +96,9 @@ int dp(const vector<int>& coins, int amount, vector<int>& cache) {
 }
 ```
 
-## 3. 迭代解法，递归缺陷很明显，数值很大的时候，很容易栈溢出
+## 3. 迭代解法
+递归缺陷很明显，数值很大的时候，很容易栈溢出
+
 ```cpp
 int change(const vector<int>& coins, int amount) {
     // 初始条件
